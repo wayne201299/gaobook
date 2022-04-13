@@ -8,10 +8,9 @@
 
 ![image](https://user-images.githubusercontent.com/11459515/163097199-36c48ee5-b5da-4b8e-9665-7aa7cee184fa.png)
 
-
 [UI設計稿-season](https://excalidraw.com/#json=SDqxNcSV2FVpX1ewMeu22,xeq9kqjBZvZss35qwe1pVQ)
 
-![](https://i.imgur.com/EHqWhZR.png)
+![image](https://user-images.githubusercontent.com/11459515/163097285-2f9b03da-53b9-42d3-b305-f216095105b1.png)
 
 [UI設計稿-map](https://excalidraw.com/#json=ibsN80MqRZ8tf1WEG7h-B,eMNeRDeTGYmJ1XG4P7rscw)
 
