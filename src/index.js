@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import  Es6Pratice from './components/Es6Pratice';
+
+const printMessage = () => {
+  document.getElementById('show-area').innerHTML = 'clicked!';
+}
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div>
+    <App name='hi Gaole' handleClick={printMessage}/>
+    <Es6Pratice />
+    <div id='show-area' ></div>
+  </div>,
   document.getElementById('root')
 );
 
