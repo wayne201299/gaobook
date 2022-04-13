@@ -1,9 +1,10 @@
-import "./tag.css";
+import "./_tag.css";
 
 function Tag(props:any) {
     return (
       <div className='tag'>
-          Tag
+          <div>tag-name</div>
+          <div>cnt</div>
       </div>
     );
 }
