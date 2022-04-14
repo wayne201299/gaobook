@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 function App(props: any) {
   return (
     <div className="flex">
-      <div className="flex-wrap p-10">
+      <div className="flex-wrap pl-10">
         <div className="mb-4 text-5xl">Home</div>
         <Nav></Nav>
       </div>
