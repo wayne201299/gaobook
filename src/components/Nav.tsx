@@ -16,29 +16,29 @@ function Nav(props: any) {
           </Link>
           <ul id="dropdown-container" className="pl-10 hidden">
             <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
-              <a href="#">
+              <Link to="/collection/1">
                 <div>第一彈</div>
-              </a>
+              </Link>
             </li>
             <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
-              <a href="#">
+              <Link to="/collection/2">
                 <div>第二彈</div>
-              </a>
+              </Link>
             </li>
             <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
-              <a href="#">
+              <Link to="/collection/3">
                 <div>第三彈</div>
-              </a>
+              </Link>
             </li>
             <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
-              <a href="#">
+              <Link to="/collection/4">
                 <div>第四彈</div>
-              </a>
+              </Link>
             </li>
             <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
-              <a href="#">
+              <Link to="/collection/5">
                 <div>第五彈</div>
-              </a>
+              </Link>
             </li>
           </ul>
         </li>

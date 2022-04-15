@@ -3,6 +3,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Collection from "./page/Collection";
 import Map from "./page/Map";
+import Season from "./page/Season";
 
 function App(props: any) {
   return (
@@ -13,7 +14,9 @@ function App(props: any) {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Collection />} />
-          <Route path="collection" element={<Collection />} />
+          <Route path="collection" element={<Collection />}>
+            <Route path="/collection/:id" element={<Season />} />
+          </Route>
           <Route path="map" element={<Map />} />
 
           {/* Using path="*"" means "match anything", so this route
