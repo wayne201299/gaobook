@@ -22,6 +22,7 @@
 # 開發
 ## 前端
 * React - framework
+  * router - react-router-dom 
 * Tailwind CSS - UI design
 * TypeScript - 型別檢查
 ## 後端

@@ -1,4 +1,4 @@
-import "./_tag.css";
+import "./_tag.scss";
 
 function Tag(props:any) {
     return (

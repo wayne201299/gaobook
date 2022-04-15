@@ -1,47 +1,51 @@
+import { Link } from "react-router-dom";
 import "./_nav.scss";
 
 function Nav(props: any) {
   return (
-    <div className="w-48 bg-navBlue">
+    <div className="w-48 bg-white shadow-md">
       <ul className="">
         <li className=" cursor-pointer ">
-          <a href="#">
-            <div className="p-6 hover:bg-navHover" onClick={dropdownClicked}>
+          <Link to="/collection">
+            <div
+              className="p-6 hover:bg-slate-100 active:bg-slate-100"
+              onClick={dropdownClicked}
+            >
               My Collection
             </div>
-          </a>
+          </Link>
           <ul id="dropdown-container" className="pl-10 hidden">
-            <li className="hover:bg-navHover">
+            <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
               <a href="#">
-                <div>Season 1</div>
+                <div>第一彈</div>
               </a>
             </li>
-            <li className="hover:bg-navHover">
+            <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
               <a href="#">
-                <div>Season 2</div>
+                <div>第二彈</div>
               </a>
             </li>
-            <li className="hover:bg-navHover">
+            <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
               <a href="#">
-                <div>Season 3</div>
+                <div>第三彈</div>
               </a>
             </li>
-            <li className="hover:bg-navHover">
+            <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
               <a href="#">
-                <div>Season 4</div>
+                <div>第四彈</div>
               </a>
             </li>
-            <li className="hover:bg-navHover">
+            <li className="hover:bg-slate-100 active:bg-slate-100 p-2">
               <a href="#">
-                <div>Season 5</div>
+                <div>第五彈</div>
               </a>
             </li>
           </ul>
         </li>
-        <li className="hover:bg-navHover cursor-pointer">
-          <a href="#">
+        <li className="hover:bg-slate-100 active:bg-slate-100 cursor-pointer">
+          <Link to="/map">
             <div className="p-6">Map</div>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
@@ -50,11 +54,16 @@ function Nav(props: any) {
 
 function dropdownClicked(): void {
   const drp = document.getElementById("dropdown-container")!;
+  logDemo.bind("bind demo");
   if (drp.style.display === "none") {
     drp.style.display = "block";
   } else {
     drp.style.display = "none";
   }
+}
+
+function logDemo(value: string): void {
+  console.log("Hi Im demo what is " + value);
 }
 
 export default Nav;

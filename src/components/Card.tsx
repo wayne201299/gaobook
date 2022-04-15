@@ -1,4 +1,4 @@
-import "./_card.css";
+import "./_card.scss";
 
 function Card(props: any) {
   return (

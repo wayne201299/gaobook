@@ -1,21 +1,47 @@
-import "./App.css";
-import SeansonBookmark from "./components/SeansonBookmark";
+import "./App.scss";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Nav from "./components/Nav";
+import Collection from "./page/Collection";
+import Map from "./page/Map";
 
 function App(props: any) {
   return (
+    <div className="">
+      <Link to="/collection">
+        <div className="m-4 text-5xl cursor-pointer">Home</div>
+      </Link>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Collection />} />
+          <Route path="collection" element={<Collection />} />
+          <Route path="map" element={<Map />} />
+
+          {/* Using path="*"" means "match anything", so this route
+                acts like a catch-all for URLs that we don't have explicit
+                routes for. */}
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
+    </div>
+  );
+}
+
+function Layout() {
+  return (
     <div className="flex">
-      <div className="flex-wrap pl-10">
-        <div className="mb-4 text-5xl">Home</div>
-        <Nav></Nav>
-      </div>
-      <div className="flex flex-wrap p-10">
-        <SeansonBookmark season="1"></SeansonBookmark>
-        <SeansonBookmark season="2"></SeansonBookmark>
-        <SeansonBookmark season="3"></SeansonBookmark>
-        <SeansonBookmark season="4"></SeansonBookmark>
-        <SeansonBookmark season="5"></SeansonBookmark>
-      </div>
+      <Nav></Nav>
+      <Outlet />
+    </div>
+  );
+}
+
+function NoMatch() {
+  return (
+    <div>
+      <h2>Nothing to see here!</h2>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
     </div>
   );
 }
